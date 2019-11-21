@@ -1,0 +1,23 @@
+{
+    "name": "wfm",
+    "require": {
+        "phpmailer/phpmailer": "^6.0",
+        "intervention/image": "^2.4",
+        "catfan/medoo":"*",
+        "league/route": "^3.1",
+        "predis/predis": "*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\" : "app/class",
+            "Api\\" : "app/module"
+        }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}

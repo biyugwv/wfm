@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+
+
+</head>
+<body>
+    
+</body>
+<script>
+    var ws = new WebSocket("ws://192.168.236.130:1992");
+ 
+ws.onopen = function(evt) {
+	console.log("Connection open ...");
+	ws.send("Hello WebSockets!");
+};
+ 
+ws.onmessage = function(evt) {
+	console.log("Received Message: " + evt.data);
+	ws.close();
+};
+ 
+ws.onclose = function(evt) {
+	console.log("Connection closed.");
+};
+
+</script>
+</html>
